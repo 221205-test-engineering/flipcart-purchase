@@ -13,11 +13,13 @@ public class SelectedProductPage {
         PageFactory.initElements(driver, this);
     }
 //  Add product to the cart button
-    @FindBy(xpath = "//*[@id=\"container\"]//div[3]/div[1]/div[1]/div[2]//li[1]/button")
+    @FindBy(xpath = "//ul[@class = 'row']/li[1]/button")
     public WebElement addCart;
 
-//    // Product order locator
-//    @FindBy(className = "_2KpZ6l _2U9uOA ihZ75k _3AWRsL")
-//    public WebElement buyNow;
-//
+    @FindBy(linkText = "Cart")
+    public WebElement cartIcon;
+
+    // Product order locator
+    @FindBy(xpath = "//ul[@class = 'row']/li[2]/form/button")
+    public WebElement buyNow;
 }

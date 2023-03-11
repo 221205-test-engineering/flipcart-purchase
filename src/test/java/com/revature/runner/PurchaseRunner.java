@@ -24,8 +24,8 @@ public class PurchaseRunner{
     public static SignUpPage signUpPage;
     @BeforeClass
     public static void setup(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         mainPage = new MainPage(driver);
         selectedProductPage = new SelectedProductPage(driver);
         signUpPage = new SignUpPage(driver);
