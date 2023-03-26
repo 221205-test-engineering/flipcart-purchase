@@ -14,8 +14,31 @@ public class SignUpPage {
         PageFactory.initElements(driver, this);
     }
 
+    // Login button in the opening page
+    @FindBy(xpath = "//a[@class = '_1_3w1N']")
+    public WebElement login;
+
+    //New Frame - New to Flipcart? locator
+    @FindBy(partialLinkText = "New to Flipkart")
+    public WebElement newUser;
+
+    // New Frame - Text locator
+    @FindBy(xpath = "//span[@class = '_36KMOx']/span")
+    public WebElement newHere;
+
+    // Input field phone number locator
+    @FindBy(xpath = "//input[@type = 'text']")
+    public WebElement phoneNumber;
+
+    //Signup continue button locator
+    @FindBy(xpath = "//div[@class = '_1D1L_j']/button")
+    public WebElement signUpContinue;
+
+    @FindBy(xpath = "//span[@class = '_2YULOR']/span")
+    public WebElement invalidNo;
+
     // Login page title
-    @FindBy(className = "_1aULyb")
+    @FindBy(xpath = "//div[@class = 'rvsx1l']/div/h3/span[2]")
     public WebElement loginPageHeader;
 
     // Login/SignUp email input field locator

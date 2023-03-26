@@ -16,12 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.numberOfWindowsToBe;
-import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
+import static org.junit.Assert.assertEquals;
+
 
 public class ProductPurchaseImpl {
      public WebDriver driver = PurchaseRunner.driver;
@@ -81,15 +80,18 @@ public class ProductPurchaseImpl {
         }catch (IOException e){}
 
         selectedProductPage.cartIcon.click();
+
     }
     @When("User select place the order")
     public void user_select_place_the_order() throws InterruptedException {
         Thread.sleep(5000);
         placeOrderPage.placeOrder.click();
 
-    }
-    @Then("Order should be reflected in the users my orders")
-    public void order_should_be_reflected_in_the_users_my_orders() {
 
+    }
+    @Then("User should be in the Sign up or Sign in page")
+    public void User_should_be_in_the_Sign_up_or_Sign_in_page() {
+        assertEquals(signUpPage.loginPageHeader.getText(),"LOGIN OR SIGNUP");
+//        System.exit(1);
     }
 }

@@ -5,4 +5,4 @@ Feature: Guest visited the flipcart website
     When User select the product
     When User add product to the cart
     When User select place the order
-#    Then Order should be reflected in the users my orders
+    Then User should be in the Sign up or Sign in page

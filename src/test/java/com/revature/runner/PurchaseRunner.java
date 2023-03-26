@@ -16,22 +16,30 @@ import org.openqa.selenium.support.ui.Select;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/com/revature/features/ProductPurchase.feature", glue="com.revature.steps")
+@CucumberOptions(
+        features={"src/test/java/com/revature/features/"},
+        glue={"com.revature.steps"},
+        plugin = {"pretty",
+                "json:target/cucumber-reports/cucumber.json",
+                "html:target/cucumber-reports/cucumber.html"},
+        monochrome = true
+        )
 public class PurchaseRunner{
     public static WebDriver driver;
     public static MainPage mainPage;
     public static SelectedProductPage selectedProductPage;
     public static SignUpPage signUpPage;
     @BeforeClass
-    public static void setup(){
+    public static void setUp(){
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         mainPage = new MainPage(driver);
         selectedProductPage = new SelectedProductPage(driver);
         signUpPage = new SignUpPage(driver);
     }
     @AfterClass
-    public static void teardown(){
+    public static void tearDown(){
         driver.quit();
     }
 }
