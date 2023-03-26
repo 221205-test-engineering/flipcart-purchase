@@ -1,0 +1,7 @@
+com\revature\runner\PurchaseRunner.class
+com\revature\steps\ProductPurchaseImpl.class
+com\revature\pages\SignUpPage.class
+com\revature\pages\MainPage.class
+com\revature\pages\SelectedProductPage.class
+com\revature\steps\SignUPImpl.class
+com\revature\pages\PlaceOrderPage.class

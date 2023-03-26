@@ -11,7 +11,7 @@ public class SignUPImpl {
 
     public WebDriver driver = PurchaseRunner.driver;
     public SignUpPage signUpPage = new SignUpPage(driver);
-    // Step Defenitions
+    // Step Defenitions files
     @Then("A new login page opens")
     public void a_new_login_page_opens() throws InterruptedException {
         Thread.sleep(5000);
