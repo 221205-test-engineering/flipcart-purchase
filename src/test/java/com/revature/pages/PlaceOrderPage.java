@@ -11,6 +11,7 @@ public class PlaceOrderPage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
+    // place order locator
     @FindBy(xpath = "//form[@method='post']/button")
     public WebElement placeOrder;
 }
